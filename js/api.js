@@ -1,11 +1,14 @@
 MinecraftAPI.getServerStatus('cloudpotato.nl', {
     port: 25565
 }, function (err, status) {
-    document.querySelector('.server-online').innerHTML = status.online ? 'Online' : 'Offline';
-    document.querySelector('.server-players').innerHTML = status.players.now;
-    document.querySelector('.server-maxplayers').innerHTML = status.players.max;
-    document.querySelector('.server-motd').innerHTML = status.motd;
-    document.querySelector('.server-icon').src = status.favicon;
+    
+    function renderOnlinePlayers(status) {
+        return status.players.now + ' / ' + status.players.max + ' Players';
+    }
+    document.querySelector('.online').innerHTML = status.online ? 'Online' : 'Offline';
+    document.querySelector('.players').innerHTML = renderOnlinePlayers(status);
+    document.querySelector('.motd').innerHTML = status.motd;
+    document.querySelector('.icon').src = status.favicon;
 });
 
 MinecraftAPI.getServerQuery('cloudpotato.nl', {
@@ -37,7 +40,7 @@ MinecraftAPI.getServerQuery('cloudpotato.nl', {
         return list;
     };
 
-    document.getElementById('plugins').appendChild(renderPluginList(status.plugins));
-    document.getElementById('players-avatars').appendChild(renderAvatarList(status.players.list));
+    document.getElementById('plugins-list').appendChild(renderPluginList(status.plugins));
+    document.getElementById('players-list').appendChild(renderAvatarList(status.players.list));
 
 });
