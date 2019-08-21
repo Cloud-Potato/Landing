@@ -1,0 +1,31 @@
+body,
+html {
+    height: 100%;
+}
+
+ul {
+    margin-bottom: 0 !important;
+}
+
+.btn-primary:first-child {
+    margin-right: 10px;
+}
+
+.avatar-list {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.avatar {
+    max-height: 28px;
+    margin-right: 10px;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+tr:first-child th,
+tr:first-child td {
+    border: none !important;
+}
