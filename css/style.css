@@ -11,6 +11,10 @@ ul {
     margin-right: 10px;
 }
 
+.card {
+    min-width: 380px;
+}
+
 .avatar-list {
     list-style: none;
     padding-inline-start: 0px;
@@ -23,6 +27,7 @@ ul {
 
 .logo {
     margin-bottom: 40px;
+    min-width: 380px;
 }
 
 tr:first-child th,
