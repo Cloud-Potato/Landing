@@ -15,7 +15,7 @@
       >
         <b-jumbotron class="shadow-sm my-auto">
           <template #header>
-            Cloudpotato
+            <h1 class="display-4">Cloudpotato</h1>
           </template>
 
           <template #lead>
