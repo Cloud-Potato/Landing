@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  landing:
+    container_name: landing
+    build: .
+    expose:
+      - 80
+    environment:
+      VIRTUAL_HOST: cloudpotato.nl
+      LETSENCRYPT_HOST: cloudpotato.nl
+      LETSENCRYPT_EMAIL: marc0tjevp@gmail.com
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
