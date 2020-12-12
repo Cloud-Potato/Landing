@@ -1,17 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-container class="text-white text-center">
+      <img alt="logo" class="logo" src="../assets/logo.png" />
+      <Welcome />
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
+import Welcome from "@/components/Welcome.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld,
+    Welcome,
   },
 };
 </script>
+
+<style>
+.logo {
+  max-height: 160px;
+  margin-bottom: 50px;
+}
+</style>

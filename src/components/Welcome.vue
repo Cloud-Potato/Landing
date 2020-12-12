@@ -1,0 +1,46 @@
+<template>
+  <div class="welcome">
+    <b-row>
+      <b-col>
+        <b-jumbotron class="shadow-sm my-auto">
+          <template #header>
+            Cloudpotato
+          </template>
+
+          <template #lead>
+            Cloudpotato is an umbrella for multiple services and websites ran by
+            a small group of developers.
+          </template>
+
+          <b-button
+            size="lg"
+            block
+            class="shadow-sm"
+            href="https://status.cloudpotato.nl/"
+            target="_blank"
+            variant="outline-info"
+            >Status page</b-button
+          >
+        </b-jumbotron>
+      </b-col>
+    </b-row>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+
+@Component
+export default class Welcome extends Vue {}
+</script>
+
+<style scoped>
+.lead {
+  padding: 20px;
+}
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #222629;
+}
+</style>
