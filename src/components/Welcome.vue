@@ -1,7 +1,18 @@
 <template>
   <div class="welcome">
     <b-row>
-      <b-col>
+      <b-col
+        offset="1"
+        cols="10"
+        offset-sm="0"
+        sm="12"
+        offset-md="2"
+        md="8"
+        offset-lg="3"
+        lg="6"
+        offset-xl="3"
+        xl="6"
+      >
         <b-jumbotron class="shadow-sm my-auto">
           <template #header>
             Cloudpotato
